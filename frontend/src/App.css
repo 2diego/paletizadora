@@ -1,0 +1,140 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(31, 41, 55, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-nav-link {
+  color: rgb(147, 197, 253);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+}
+
+.app-nav-link:hover {
+  background: rgba(59, 130, 246, 0.2);
+  color: rgb(191, 219, 254);
+}
+
+.app-nav-link.active {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+.app-main {
+  width: 100%;
+  min-height: calc(100vh - 52px);
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  .app-nav {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .app-nav-link {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.875rem;
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Toast y modal de confirmación (accesibles) */
+.ui-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.25rem;
+  background: rgb(31, 41, 55);
+  color: rgb(233, 232, 232);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 10000;
+  max-width: min(90vw, 400px);
+}
+
+.ui-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 1rem;
+}
+
+.ui-modal {
+  background: rgb(31, 41, 55);
+  color: rgb(233, 232, 232);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ui-modal-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ui-modal-message {
+  margin: 0 0 1.25rem 0;
+  color: rgba(233, 232, 232, 0.9);
+}
+
+.ui-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
