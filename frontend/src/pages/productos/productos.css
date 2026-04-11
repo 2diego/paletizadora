@@ -1,0 +1,242 @@
+.productos-page {
+  padding: 2rem;
+  background-color: rgb(17, 24, 39);
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgb(233, 232, 232);
+  min-height: calc(100vh - 4rem);
+}
+
+.productos-page .page-header {
+  margin-bottom: 2rem;
+}
+
+.productos-page .page-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: rgb(233, 232, 232);
+}
+
+.productos-page .page-header p {
+  font-size: 1rem;
+  color: rgba(233, 232, 232, 0.7);
+  margin: 0;
+}
+
+.productos-page .message {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.productos-page .message-error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: rgb(248, 113, 113);
+}
+
+.productos-form-section,
+.productos-list-section {
+  background: rgba(31, 41, 55, 0.6);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.productos-form-section h2,
+.productos-list-section h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  color: rgb(233, 232, 232);
+}
+
+.productos-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.productos-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 120px;
+}
+
+.productos-form .form-group-total {
+  min-width: 140px;
+}
+
+.productos-form .total-bultos {
+  padding: 0.2rem 0.75rem;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgb(233, 232, 232);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.productos-form .form-group-total small {
+  font-size: 0.7rem;
+  color: rgba(233, 232, 232, 0.6);
+  margin-top: 0.2rem;
+}
+
+.productos-form label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(233, 232, 232, 0.9);
+}
+
+.productos-form input {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  color: rgb(233, 232, 232);
+  font-size: 1rem;
+}
+
+.productos-form input:focus {
+  outline: none;
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.productos-form .form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.productos-page .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.productos-page .btn-primary {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8));
+  color: white;
+}
+
+.productos-page .btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.productos-page .btn-secondary {
+  background: rgba(107, 114, 128, 0.4);
+  color: rgb(233, 232, 232);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.productos-page .btn-small {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8125rem;
+  margin-right: 0.5rem;
+}
+
+.productos-page .btn-danger {
+  background: rgba(239, 68, 68, 0.3);
+  color: rgb(248, 113, 113);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.productos-page .btn-danger:hover {
+  background: rgba(239, 68, 68, 0.5);
+}
+
+.productos-page .loading,
+.productos-page .empty {
+  color: rgba(233, 232, 232, 0.7);
+  margin: 0;
+}
+
+.productos-table-wrap {
+  overflow-x: auto;
+}
+
+.productos-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.productos-table th,
+.productos-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.productos-table th {
+  font-weight: 600;
+  color: rgba(233, 232, 232, 0.9);
+}
+
+.productos-table td.actions {
+  white-space: nowrap;
+}
+
+.productos-table tbody tr:hover {
+  background: rgba(17, 24, 39, 0.4);
+}
+
+@media (max-width: 768px) {
+  .productos-page {
+    padding: 1rem;
+  }
+
+  .productos-page .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .productos-form .form-row {
+    flex-direction: column;
+  }
+
+  .productos-form .form-group {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .productos-form .form-actions {
+    flex-wrap: wrap;
+  }
+
+  .productos-table {
+    font-size: 0.8125rem;
+  }
+
+  .productos-table th,
+  .productos-table td {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .productos-page .btn-small {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-page {
+    padding: 0.75rem;
+  }
+
+  .productos-form-section,
+  .productos-list-section {
+    padding: 1rem;
+  }
+
+  .productos-table td.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
